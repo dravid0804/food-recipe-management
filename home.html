@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Recipe Management</title>
+    <link rel="stylesheet" href="stylehome.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar">
+        <div class="logo">🍽️ Food Recipe Mangement</div>
+        <nav>
+            <a href="about.html">About Us</a>
+            <button id="loginBtn">Login</button>
+            <button id="registerBtn">Register</button>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Food Recipe Management</h1>
+        <p>Discover, Share, and Enjoy Amazing Recipes!</p>
+        <button id="exploreBtn">Explore Recipes</button>
+    </section>
+
+    <!-- Login Modal -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Login</h2>
+            <form id="loginForm" action="login.php" method="post">
+                <input type="text" id="loginUsername" placeholder="Username" required>
+                <input type="password" id="loginPassword" placeholder="Password" required>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Register Modal -->
+    <div id="registerModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Register</h2>
+            <form id="registerForm" action="register.php" method="post">
+                <input type="text" name="regUsername" id="regUsername" placeholder="Username" required>
+                <input type="email" name="regEmail" id="regEmail" placeholder="Email" required>
+                <input type="password" name="regPassword" id="regPassword" placeholder="Password" required>
+                <button type="submit">Register</button>
+            </form>
+            
+        </div>
+    </div>
+
+    <script src="scripthome.js"></script>
+
+</body>
+</html>

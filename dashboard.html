@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styledash.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo"><h2>🍽️ Recipe Manager</h2></div>
+    <nav>
+      <ul>
+        <li><button id="addRecipeBtn">➕ Add Recipe</button></li>
+        <li><a href="public_recipes.html"><button>🌍 Public Recipes</button></a></li>
+        <li><a href="stats.html"><button>📊 Your Stats</button></a></li>
+        <li><button id="logoutBtn">🚪 Logout</button></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="dashboard-content">
+    <header class="dashboard-header">
+      <h2>Welcome back, <span id="username"></span>!</h2>
+    </header>
+    <section class="recipes-section">
+      <h3>Your Recipes</h3>
+      <div id="recipeList" class="recipe-grid"></div>
+    </section>
+  </main>
+
+  <div id="recipeModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalTitle">Add New Recipe</h2>
+      <form id="recipeForm">
+        <input type="hidden" id="recipeId">
+        <input type="text" id="recipeTitle" name="title" placeholder="Title" required>
+        <textarea id="recipeDescription" name="description" placeholder="Description" required></textarea>
+        <button type="submit">Save Recipe</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

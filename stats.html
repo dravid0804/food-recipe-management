@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Stats</title>
+  <link rel="stylesheet" href="styledash.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo"><h2>📊 Stats</h2></div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html"><button>🏠 Dashboard</button></a></li>
+        <li><a href="public_recipes.html"><button>🌍 Public Recipes</button></a></li>
+        <li><button onclick="window.location.href='logout.php'">🚪 Logout</button></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="dashboard-content">
+    <header class="dashboard-header">
+      <h2>Your Statistics</h2>
+    </header>
+    <section class="recipes-section" id="statsContent"></section>
+  </main>
+
+  <script>
+    fetch('user_stats.php')
+      .then(res => res.text())
+      .then(data => document.getElementById('statsContent').innerHTML = data);
+  </script>
+</body>
+</html>

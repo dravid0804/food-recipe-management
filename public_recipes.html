@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Public Recipes</title>
+  <link rel="stylesheet" href="styledash.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="logo"><h2>🌍 Public Recipes</h2></div>
+    <nav>
+      <ul>
+        <li><a href="dashboard.html"><button>🏠 Dashboard</button></a></li>
+        <li><a href="stats.html"><button>📊 Your Stats</button></a></li>
+        <li><button onclick="window.location.href='logout.php'">🚪 Logout</button></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <main class="dashboard-content">
+    <header class="dashboard-header">
+      <h2>All Recipes</h2>
+    </header>
+    <div id="publicList" class="recipe-grid"></div>
+  </main>
+
+  <script>
+    fetch('public_recipes.php')
+      .then(res => res.text())
+      .then(data => document.getElementById('publicList').innerHTML = data);
+  </script>
+</body>
+</html>

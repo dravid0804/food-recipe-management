@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | RecipeMaster</title>
+    <link rel="stylesheet" href="stylecontact.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h1>Food Recipe Management</h1>
+        <nav>
+            <ul>
+                <li><a href="home.html">🏠 Home</a></li>
+                <li><a href="about.html">ℹ️ About Us</a></li>
+                <li><a href="contact.html" class="active">📞 Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Contact Section -->
+    <section class="contact">
+        <div class="container">
+            <h2>Get in Touch</h2>
+            <p>If you have any questions, feedback, or just want to say hello, feel free to contact us!</p>
+
+            <div class="contact-wrapper">
+                <!-- Contact Form -->
+                <form id="contactForm" action="contact.php" method="post">
+                    <input type="text" name="name" id="name" placeholder="Your Name" required>
+                    <input type="email" name="email" id="email" placeholder="Your Email" required>
+                    <textarea name="message" id="message" placeholder="Your Message" required></textarea>
+                    <button type="submit">Send Message</button>
+                </form>
+
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h3>📍 Our Location</h3>
+                    <p>Vellore Institute Of Technology, Katpadi, Tamil Nadu</p>
+                    <h3>📧 Email Us</h3>
+                    <p>support@foodrecipemanagement.com</p>
+                    <h3>📞 Call Us</h3>
+                    <p>+91 98765 43210</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Food Recipe Management. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
